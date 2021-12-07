@@ -52,7 +52,7 @@ Se inicia el proyecto en la carpeta de docker:
 
 Paso 1: Inicialización de contenedores
 
-`instructions.sh`
+`sh instructions.sh`
 
 Paso 2: Consultas a través de la REST API. 
 
@@ -96,7 +96,11 @@ Paso 2: Consultas a través de la REST API.
 
 Paso 3: Detener contenedores
 
+`cd docker `
+
 `docker-compose stop`
+
+`docker-compose down`
 
 
 #### Notas Adicionales: 
