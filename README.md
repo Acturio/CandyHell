@@ -74,11 +74,25 @@ Paso 2: Consultas a través de la REST API.
 
 * Se obtienen la gráfica de la curva ROC con:
 
-`curl -o curva_roc.png localhost:8000/roc_curve_plot --request GET; xdg-open curva_roc.png`
+    LINUX:
+
+    `curl -o curva_roc.png localhost:8000/roc_curve_plot --request GET; xdg-open curva_roc.png`
+
+    MAC:
+
+    `curl -o curva_roc.png localhost:8000/roc_curve_plot --request GET; open curva_roc.png`
+
 
 * Se obtienen la gráfica de precision vs. recall con:
 
-`curl -o pr_plot.png localhost:8000/pr_curve_plot --request GET; xdg-open pr_plot.png`
+    LINUX:
+
+    `curl -o pr_plot.png localhost:8000/pr_curve_plot --request GET; xdg-open pr_plot.png`
+
+    MAC:
+
+    `curl -o pr_plot.png localhost:8000/pr_curve_plot --request GET; open pr_plot.png`
+
 
 Paso 3: Detener contenedores
 
