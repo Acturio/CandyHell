@@ -58,6 +58,8 @@ Paso 1: Inicialización de contenedores, ejecutar:
 
 Paso 2: Consultas a través de la REST API:
 
+En otra terminal usted puede ejectuar lo siguiente posicionandose en el Home del Proyecto
+
 * Se realizan las predicciones de nuevos datos con el comando: 
 
 `curl localhost:8000/prediction -H "Content-Type: application/json" --request POST --data @predict_data.json`
