@@ -9,9 +9,13 @@
 | @codeMariana     | Mariana Lugo   | 
 | @KaLizzyGam  | Lizette Gamboa | 
 
-### Objetivo: ML model and API project 
+### Contexto
+Las enfermedades cardiovasculares (ECV) son la principal causa de muerte en todo el mundo, cada año mueren más personas por este tipo de enfermedad que por cualquier otra causa. La mayoría de las ECV pueden prevenirse actuando sobre factores de riesgo comportamentales, como el consumo de tabaco, las dietas malsanas y la obesidad, la inactividad física o el consumo nocivo de alcohol. 
 
-El problema de negocio es determinar la presencia de enfermedad en el corazón dadas las características de los pacientes.
+### Objetivo
+El objetivo de esta aplicación es que las personas, organizaciones y/o gobiernos puedan ingresar datos que permitan detectar tempranamente el riesgo de tener enfermedades cardiovasculares. Es fundamental para las personas con mayor riesgo de tener ECV una detección temprana para recibir los tratamientos necesarios.
+
+### ML model and API project 
 Se realiza el producto de datos en **R** y **Postegres** con imágenes y contenedores en **Docker**. Se corre una API con [plumber](https://www.rplumber.io/) que realiza:
 
 1. Las predicciones de nuevos datos.
