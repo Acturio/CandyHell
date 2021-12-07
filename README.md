@@ -43,6 +43,11 @@ Se utilizan los datos de [Heart Failure Prediction Dataset](https://www.kaggle.c
 
 ### Instrucciones para la API
 
+**Requisitos:** 
+- Tener instalado [Docker](https://docs.docker.com/get-docker/).
+
+
+
 Se inicia el proyecto en la carpeta de docker:
 
 Paso 0: 
