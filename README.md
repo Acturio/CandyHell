@@ -50,36 +50,11 @@ Se utilizan los datos de [Heart Failure Prediction Dataset](https://www.kaggle.c
 
 Se inicia el proyecto en la carpeta de docker:
 
-Paso 0: 
+Paso 1: Inicialización de contenedores
 
-`cd docker`
+`instructions.sh`
 
-Paso 1: Instalación docker-compose:
-
-`sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose`
-
-
-`sudo chmod +x /usr/local/bin/docker-compose` 
-
-`docker-compose --version`
-
-Paso 2: Se crea la imagen de postgres.
-
-`docker pull postgres:13.3`
-
-Paso 3: Se crea la imagen de RStudio
-
-`docker build -t plumber:1.0.0 . `
-
-Paso 4: Se inicializan contenedores.
-
-`docker-compose up --build`
-
-Paso 5: Cambiar de directorio.
-
-`cd ..`
-
-Paso 6: Se puede utilizar la API. 
+Paso 2: Consultas a través de la REST API. 
 
 * Se realizan las predicciones de nuevos datos con: 
 
@@ -105,5 +80,7 @@ Paso 6: Se puede utilizar la API.
 
 `curl -o pr_plot.png localhost:8000/pr_curve_plot --request GET; xdg-open pr_plot.png`
 
+Paso 3: Detener contenedores
 
+`docker-compose stop`
 
