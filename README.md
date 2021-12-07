@@ -113,6 +113,40 @@ Paso 3: Detener contenedores
 
 `docker-compose down`
 
+### Machine Learning Model
+
+La variable de respuesta de este conjunto de datos es categórica, por lo que el modelo implementado corresponde a uno de clasificación.
+El modelo baseline de este proyecto se realiza a través de una regresión logística en donde todas las variables restantees forman parte del conjunto de variables explicativas.
+
+#### Análisis Exploratorio Gráfico de Datos
+
+Para conocer mejor las características del conjunto de datos con el que se trabaja, se ha incluido un reporte gráfico con las distribuciones y relaciones entre las variables por analizar. Dentro de la carpeta `geda` se encuentra el documento HTML con los resultados de dicho análisis.
+
+#### Partición de datos
+
+Para la creación del modelo, se realiza una partición a los datos, la cual se realiza de la siguiente manera:
+
+* Conjunta de entrenamiento: 80%
+
+* Conjunto de prueba: 20%
+
+#### Pre-procesamiento de datos
+
+* Debido a que en muchos registros no se cuenta con la información correcta de colesterol, se realiza una imputación por la mediana de esta variable
+
+* Todas las variables numéricas son estandarizadas con la distribución normal estándar del conjunto de entrenamiento
+
+* Para todas las categorías de las variables nominales, se realiza la dicotomización de sus respectios niveles.
+
+#### Predicciones
+
+El modelo permite conocer la probabilidad de que dadas las características de un nuevo individuo, se presente alguna enfermedad del corazón. Los resultados son obtenidos mediante la API a través de los comandos mostrados anteriormente. Cada registro obtiene dos valores como resultado:
+
+* .pred_1: Probabilidad de presentar enfermedades cardiacas
+
+* .pred_0: Probabilidad de no presentar enfermedades cardiacas.
+
+La suma de estos dos resultados es 100% para cada indivuduo.
 
 #### Notas Adicionales: 
 
