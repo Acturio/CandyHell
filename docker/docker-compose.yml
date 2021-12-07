@@ -1,0 +1,29 @@
+version: '3.7'
+services:
+  db:
+    image: "postgres:13.3"
+    environment:
+        POSTGRES_HOST_AUTH_METHOD: trust
+    volumes:
+       - ./data/heart.csv:/var/lib/postgresql/pg_data
+       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+     - 5432:5432
+
+  rstudio:
+    image: plumber:1.0.1
+    container_name: rstudio_test
+    restart: always
+    ports:
+     - 8787:8787
+     - 8000:8000
+    privileged: true
+    environment:
+     USER: rstudio
+     PASSWORD: qwerty
+     root: "TRUE"
+    depends_on:
+     - "db"
+    links: 
+     - "db"
+
