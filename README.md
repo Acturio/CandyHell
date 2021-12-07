@@ -46,29 +46,31 @@ Se utilizan los datos de [Heart Failure Prediction Dataset](https://www.kaggle.c
 **Requisitos:** 
 - Tener instalado [Docker](https://docs.docker.com/get-docker/).
 
+- Tener instalado [Docker-Compose](https://docs.docker.com/compose/install/).
 
 
-Se inicia el proyecto en la carpeta de docker:
 
-Paso 1: Inicialización de contenedores
+Se inicia el proyecto en la carpeta de Home (main) del proyecto CandyHell:
+
+Paso 1: Inicialización de contenedores, ejecutar:
 
 `sh instructions.sh`
 
-Paso 2: Consultas a través de la REST API. 
+Paso 2: Consultas a través de la REST API:
 
-* Se realizan las predicciones de nuevos datos con: 
+* Se realizan las predicciones de nuevos datos con el comando: 
 
 `curl localhost:8000/prediction -H "Content-Type: application/json" --request POST --data @predict_data.json`
 
-* Se realiza la ingesta de nuevos datos a postgres con:
+* Se realiza la ingesta de nuevos datos a postgres con el comando:
 
 `curl localhost:8000/new_data -H "Content-Type: application/json" --request POST --data @new_data.json`
 
-* Se realiza el reentrenamiento del modelo con: 
+* Se realiza el reentrenamiento del modelo con el comando: 
 
 `curl localhost:8000/re_train --request POST`
 
-* Se obtiene el AUC de la curva ROC del modelo con: 
+* Se obtiene el AUC de la curva ROC del modelo con el comando: 
 
 `curl localhost:8000/metrics --request GET` 
 
