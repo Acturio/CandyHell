@@ -15,6 +15,13 @@ Las enfermedades cardiovasculares (ECV) son la principal causa de muerte en todo
 ### Objetivo
 El objetivo de esta aplicación es que las personas, organizaciones y/o gobiernos puedan ingresar datos que permitan detectar tempranamente el riesgo de tener enfermedades cardiovasculares. Es fundamental para las personas con mayor riesgo de tener ECV una detección temprana para recibir los tratamientos necesarios.
 
+### Herramientas
+
+* Docker
+* SQL
+* R
+* Bash
+
 ### ML model and API project 
 Se realiza el producto de datos en **R** y **Postegres** con imágenes y contenedores en **Docker**. Se corre una API con [plumber](https://www.rplumber.io/) que realiza:
 
