@@ -61,7 +61,13 @@ Se inicia el proyecto en la carpeta de Home (main) del proyecto CandyHell:
 
 Paso 1: Inicialización de contenedores, ejecutar:
 
-`sh instructions.sh`
+    Linux & Mac:
+
+    `sh instructions.sh`
+
+    Windows:
+
+    `bash ./instructions.sh`
 
 Paso 2: Consultas a través de la REST API:
 
@@ -69,41 +75,72 @@ En otra terminal usted puede ejectuar lo siguiente posicionandose en el Home del
 
 * Se realizan las predicciones de nuevos datos con el comando: 
 
-`curl localhost:8000/prediction -H "Content-Type: application/json" --request POST --data @predict_data.json`
+    Linux & Mac:
+
+    `curl localhost:8000/prediction -H "Content-Type: application/json" --request POST --data @predict_data.json`
+
+    Windows:
+
+    `curl.exe localhost:8000/prediction -H "Content-Type: application/json" --request POST --data @predict_data.json`
 
 * Se realiza la ingesta de nuevos datos a postgres con el comando:
 
-`curl localhost:8000/new_data -H "Content-Type: application/json" --request POST --data @new_data.json`
+    Linux & Mac:
+
+    `curl localhost:8000/new_data -H "Content-Type: application/json" --request POST --data @new_data.json`
+
+    Windows:
+
+    `curl.exe localhost:8000/new_data -H "Content-Type: application/json" --request POST --data @new_data.json`
 
 * Se realiza el reentrenamiento del modelo con el comando: 
 
-`curl localhost:8000/re_train --request POST`
+    Linux & Mac:
+    
+    `curl localhost:8000/re_train --request POST`
+
+    Windows
+
+    `curl.exe localhost:8000/re_train --request POST`
 
 * Se obtiene el AUC de la curva ROC del modelo con el comando: 
 
-`curl localhost:8000/metrics --request GET` 
+    Linux & Mac:
+
+    `curl localhost:8000/metrics --request GET` 
+
+    Windows
+
+    `curl.exe localhost:8000/metrics --request GET`
 
 * Se obtienen la gráfica de la curva ROC con:
 
-    LINUX:
+    Linux:
 
     `curl -o curva_roc.png localhost:8000/roc_curve_plot --request GET; xdg-open curva_roc.png`
 
-    MAC:
+    Mac:
 
     `curl -o curva_roc.png localhost:8000/roc_curve_plot --request GET; open curva_roc.png`
+
+    Windows:
+
+    `curl.exe -o curva_roc.png localhost:8000/roc_curve_plot --request GET; start curva_roc.png`
 
 
 * Se obtienen la gráfica de precision vs. recall con:
 
-    LINUX:
+    Linux:
 
     `curl -o pr_plot.png localhost:8000/pr_curve_plot --request GET; xdg-open pr_plot.png`
 
-    MAC:
+    Mac:
 
     `curl -o pr_plot.png localhost:8000/pr_curve_plot --request GET; open pr_plot.png`
 
+    Windows:
+
+    `curl.exe -o pr_plot.png localhost:8000/pr_curve_plot --request GET; start pr_plot.png`
 
 Paso 3: Detener contenedores
 
