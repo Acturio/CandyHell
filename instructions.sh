@@ -5,11 +5,11 @@ cd docker
 
 #Paso 1: Instalación docker-compose:
 
-echo "instalación de docker compose"
-sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+#echo "instalación de docker compose"
+#sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 
-echo "asignando permisos a docker compose"
-sudo chmod +x /usr/local/bin/docker-compose
+#echo "asignando permisos a docker compose"
+#sudo chmod +x /usr/local/bin/docker-compose
 
 echo "docker-compose version"
 docker-compose --version
