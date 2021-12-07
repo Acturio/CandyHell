@@ -98,3 +98,8 @@ Paso 3: Detener contenedores
 
 `docker-compose stop`
 
+
+#### Notas Adicionales: 
+
+Este repositorio es el resultado final de una serie de pruebas. Se realizó el trabajo en un repositorio *borrador*. Revisar los commits y pruebas en: [CandyWorld](https://github.com/Acturio/CandyWorld).
+
