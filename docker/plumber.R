@@ -8,6 +8,8 @@ library(jsonlite)
 library(tidyverse)
 library(tidymodels)
 library(rapidoc)
+library(DBI)
+library(RPostgres)
 
 #* Endpoint para la predicción de nuevos datos.
 #* @post /prediction

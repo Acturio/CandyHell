@@ -11,7 +11,7 @@ services:
      - 5432:5432
 
   rstudio:
-    image: plumber:1.0.1
+    image: plumber:1.0.0
     container_name: rstudio_test
     restart: always
     ports:
