@@ -21,12 +21,12 @@ docker pull postgres:13.3
 
 #Paso 3: Se crea la imagen de RStudio
 
-"Creación de imagen con plumber"
+echo "Creación de imagen con plumber"
 docker build -t plumber:1.0.0 .
 
 #Paso 4: Se inicializan contenedores.
 
-"Composición de contenedores postgres+plumber"
+echo "Composición de contenedores postgres+plumber"
 docker-compose up --build
 
 #Paso 5: Cambiar de directorio.
